@@ -16,8 +16,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/components/**/*.{js,jsx}",
+      "<rootDir>/src/views/**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ]
   },
   "eslintConfig": {
     "extends": [
