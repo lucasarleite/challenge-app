@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import Table from '../../components/Table/Table';
 
 const Tasks = () => {
 
-  const list = [{"id":0,"text":"Task","completed":false}, {"id":1,"text":"Task 1","completed":true}];
+  const [ list, setList ] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/api/tasks')
+      .then(tasks => setList(tasks.data))
+      .catch(e => {
+        setList([]);
+        console.log(e);
+      });
+  }, []);
 
   return (
     <div className="tasks">
