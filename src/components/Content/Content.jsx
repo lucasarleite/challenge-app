@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 
-import Home from '../../views/Home';
-import Tasks from '../../views/Tasks';
+import Home from '../../views/Home/Home';
+import Tasks from '../../views/Tasks/Tasks';
 
 import './Content.css';
 
@@ -17,7 +17,6 @@ const Content = () => {
           <Home />
         </Route>
       </Switch>
-      
     </div>
   )
 }

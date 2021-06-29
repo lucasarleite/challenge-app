@@ -6,7 +6,6 @@ import './Menu.css';
 const Menu = () => {
 
   const currLocation = useLocation().pathname;
-  console.log('currLocation', currLocation);
 
   return (
     <nav className="menu">
