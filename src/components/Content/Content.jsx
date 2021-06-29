@@ -2,7 +2,7 @@ import React from 'react';
 
 const Content = () => {
   return (
-    <div className="menu">
+    <div className="content">
       <h1 className="title">Content!</h1>
     </div>
   )

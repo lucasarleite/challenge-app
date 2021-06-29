@@ -1,0 +1,22 @@
+.menu {
+  width: 250px;
+  height: 100%;
+  background-color: #f5f5f5;
+  color: #101010
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 10px 5px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.menu ul li:hover,
+.menu ul li.selected {
+  background-color: #eeeeee;
+}
