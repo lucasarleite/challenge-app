@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Banner from "./Banner";
 
 describe("Banner tests", () => {
-  test("it should render Banner", () => {
+  test("it should not throw", () => {
     expect(() => render(<Banner />)).not.toThrow();
   });
 

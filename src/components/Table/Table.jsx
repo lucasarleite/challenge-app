@@ -7,7 +7,7 @@ const Table = (props) => {
   const { list, refreshCallback } = props;
 
   if (typeof refreshCallback !== 'function') {
-    return;
+    return null;
   }
 
   const getRows = (tasks) => {

@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 import Menu from "./Menu";
 
 describe("Menu tests", () => {
-  test("it should render Menu", () => {
+  test("it should not throw", () => {
     const history = createMemoryHistory();
     expect(() =>
       render(

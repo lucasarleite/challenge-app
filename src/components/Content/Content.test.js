@@ -6,7 +6,7 @@ import { render, screen } from "@testing-library/react";
 import Content from "./Content";
 
 describe("Content tests", () => {
-  test("it should render Content", () => {
+  test("it should not throw", () => {
     const history = createMemoryHistory();
     expect(() =>
       render(
