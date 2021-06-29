@@ -1,19 +1,23 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import './Menu.css';
 
 const Menu = () => {
+
+  const currLocation = useLocation().pathname;
+  console.log('currLocation', currLocation);
+
   return (
     <nav className="menu">
       <ul>
         <Link to="/">
-            <li className="selected">
+            <li className={ currLocation === "/" ? 'selected' : '' }>
               Home
             </li>
         </Link>
         <Link to="/tasks">
-          <li>
+          <li className={ currLocation === "/tasks" ? 'selected' : '' }>
             Tasks
           </li>
         </Link>
