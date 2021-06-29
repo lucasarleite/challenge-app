@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import './Menu.css';
 
@@ -6,12 +7,16 @@ const Menu = () => {
   return (
     <nav className="menu">
       <ul>
-        <li className="selected">
-          Home
-        </li>
-        <li>
-          Tasks
-        </li>
+        <Link to="/">
+            <li className="selected">
+              Home
+            </li>
+        </Link>
+        <Link to="/tasks">
+          <li>
+            Tasks
+          </li>
+        </Link>
       </ul>
     </nav>
   )

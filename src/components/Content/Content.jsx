@@ -1,9 +1,23 @@
 import React from 'react';
+import { Switch, Route } from "react-router-dom";
+
+import Home from '../../views/Home';
+import Tasks from '../../views/Tasks';
+
+import './Content.css';
 
 const Content = () => {
   return (
     <div className="content">
-      <h1 className="title">Content!</h1>
+      <Switch>
+        <Route path="/tasks">
+          <Tasks />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+      
     </div>
   )
 }
