@@ -1,0 +1,7 @@
+.table td.done {
+  color: green;
+}
+
+.table td.todo {
+  color: red;
+}

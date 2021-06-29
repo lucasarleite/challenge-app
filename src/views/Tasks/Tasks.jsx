@@ -3,7 +3,7 @@ import Table from '../../components/Table/Table';
 
 const Tasks = () => {
 
-  const list = [{"id":0,"text":"Task","completed":false}];
+  const list = [{"id":0,"text":"Task","completed":false}, {"id":1,"text":"Task 1","completed":true}];
 
   return (
     <div className="tasks">

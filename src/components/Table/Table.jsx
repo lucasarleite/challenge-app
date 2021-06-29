@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Table.css';
+
 const Table = (props) => {
 
   const { list } = props;
@@ -13,7 +15,9 @@ const Table = (props) => {
         <tr key={ task.id }>
           <th scope="row">{ task.id }</th>
           <td>{ task.text }</td>
-          <td>{ task.completed.toString() }</td>
+          <td className={ task.completed ? 'done' : 'todo' } >
+            <i className={ task.completed ? 'bi bi-check-square' : 'bi bi-x-square' } ></i>
+          </td>
         </tr>
       );
     });
