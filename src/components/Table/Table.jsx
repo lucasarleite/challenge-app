@@ -6,6 +6,10 @@ const Table = (props) => {
 
   const { list, refreshCallback } = props;
 
+  if (typeof refreshCallback !== 'function') {
+    return;
+  }
+
   const getRows = (tasks) => {
     if (!(tasks instanceof Array) || !tasks.length) {
       return (

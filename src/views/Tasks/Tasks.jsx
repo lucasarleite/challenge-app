@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
 
@@ -9,7 +9,7 @@ const Tasks = () => {
   const [ list, setList ] = useState([]);
   const currLocation = useLocation().pathname;
 
-  const refreshTasks = () => {
+  const refreshTasks = useCallback(() => {
     axios.get('http://localhost:8080/api/tasks')
       .then(tasks => {
         if (currLocation === '/tasks') {
@@ -22,11 +22,11 @@ const Tasks = () => {
         }
         console.log(e);
       });
-  };
+  }, [currLocation]);
 
   useEffect(() => {
     refreshTasks();
-  }, []);
+  }, [refreshTasks]);
 
   return (
     <div className="tasks">
