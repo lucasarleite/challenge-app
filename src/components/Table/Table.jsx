@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './Table.css';
 
 const Table = (props) => {
 
   const { list, refreshCallback } = props;
-
-  if (typeof refreshCallback !== 'function') {
-    return null;
-  }
 
   const getRows = (tasks) => {
     if (!(tasks instanceof Array) || !tasks.length) {
@@ -33,6 +29,10 @@ const Table = (props) => {
       );
     });
   };
+
+  if (typeof refreshCallback !== 'function') {
+    return null;
+  }
 
   return (
     <table className="table">
