@@ -8,5 +8,5 @@ div, .container, .container-fluid {
 
 .main {
   display: flex;
-  height: 100%;
+  height: calc(100% - 136px);
 }
